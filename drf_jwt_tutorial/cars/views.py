@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 
 class CarList(APIView):
 
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         cars = Car.objects.all()
